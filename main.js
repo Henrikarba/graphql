@@ -26,6 +26,7 @@ loginForm.addEventListener('submit', async (e) => {
         if (response.ok) {
             // Successful login
             const { token } = await response.json();
+            console.log(token);
             // Store the JWT securely (e.g., in local storage or a secure cookie) for future API requests
             localStorage.setItem('jwt', token);
             // Redirect or perform any other actions after successful login
