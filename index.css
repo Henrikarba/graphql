@@ -23,6 +23,17 @@ body {
   justify-content: center;
 }
 
+.card {
+  border: 1px;
+  background-color: rgb(161, 161, 161);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
 #password-input,
 #username-input {
   text-align: center;
@@ -44,6 +55,7 @@ body {
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
+  cursor: pointer;
   min-width: 10vw;
   height: 5vh;
   background: orange;
@@ -51,10 +63,31 @@ body {
   border-radius: 40px;
 }
 
-.profile-container {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
+#logout-button {
+  margin-left: 65vw;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  min-width: 10vw;
+  height: 5vh;
+  background: orange;
+  border: 2px solid orange;
+  border-radius: 40px;
+}
+
+#profile-container {
+  display: none;
+}
+
+.profile {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: 350px 350px;
+  gap: 10px;
+  padding: 10px;
+  text-align: center;
 }
 
 .basic-info,
@@ -77,4 +110,42 @@ ul {
 
 .hide {
   display: none;
+}
+
+.line-container {
+  width: 400px;
+  height: 200px;
+  border: 1px solid #ccc;
+  margin: 20px;
+  padding: 10px;
+}
+.line {
+  fill: none;
+  stroke: #007bff;
+  stroke-width: 2px;
+}
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+.axis text {
+  font-family: sans-serif;
+  font-size: 11px;
+}
+
+#pie-container {
+  width: 250px;
+  height: 250px;
+}
+
+#pie-tooltip {
+  position: absolute;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  font-size: 12px;
+  border-radius: 5px;
+  pointer-events: none;
 }

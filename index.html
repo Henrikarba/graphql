@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>My Profile</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
     <link rel="stylesheet" href="index.css">
   </head>
   <body>
@@ -10,8 +11,42 @@
             <input id="username-input" type="text" placeholder="username/email"></input>
             <input id="password-input" type="password" placeholder="password"></input>
             <p id="error-container"></p>
-            <button href="/main" id="submit" type="submit">Submit</button>
+            <button id="submit" type="submit">Submit</button>
         </form>
+        <div id="profile-container">
+            <button id="logout-button" type="button">Log Out</button>
+            <div class="profile">
+            <div class="basic-info card">
+                <h2>Basic Information</h2>
+                <p><strong>Name:</strong> <span id="name"></span></p>
+                <p><strong>Email:</strong> <span id="email"></span></p>
+                <p><strong>From:</strong> <span id="from"></span></p>
+                <p><strong>Phone:</strong> <span id="phone"></span></p>
+                <p><strong>XP:</strong> <span id="xp"></span></p>
+            </div>
+            <div class="tasks card">
+                <h2>Tasks</h2>
+                <div id="pie-container">
+                    <svg id="chart" width="100%" height="100%" viewBox="0 0 250 250"></svg>
+                </div>
+                <div id="pie-tooltip"></div>
+            </div>
+            <div>
+            </div>
+            <div class="audits card">
+                <h2>Audits Ratio</h2>
+                <p><strong>Done:</strong> <span id="audit-done"></span></p>
+                <p><strong>Received:</strong> <span id="audit-received"></span></p>
+                <p><strong>Total:</strong> <span id="audit-ratio"></span></p>
+            </div>
+            <div class="progress card">
+                <h2>Progress Over Time</h2>
+                <div class="line-container">
+                    <svg id="line-graph"></svg>
+                </div>
+            </div>
+          </div>
+          </div>
     </div>
     <script src="main.js"></script>
   </body>
