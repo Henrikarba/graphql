@@ -45,9 +45,15 @@ loginForm.addEventListener('submit', async (e) => {
 // Add event listener to the logout button
 logoutButton.addEventListener('click', () => {
     // Clear the JWT from local storage
+    console.log("removed jwt (logout)")
     localStorage.removeItem('jwt');
     displayLoginForm();
 });
+
+window.onbeforeunload = {
+    console.log("removed jwt (refresh)")
+    localStorage.removeItem('jwt');
+};
 
 function displayLoginForm() {
     loginForm.style.display = 'flex';
